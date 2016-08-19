@@ -13,7 +13,7 @@ RUN apt-get -y install vsftpd db5.3-util
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Configure vsftpd
-RUN mkdir -p /var/run/vsftpd/empty && mkdir -p /etc/vsftpd && mkdir -p /var/ftp && mkdir -p /var/www
+RUN mkdir -p /var/run/vsftpd/empty && mkdir -p /etc/vsftpd && mkdir -p /var/ftp
 
 # Add the Configurations files
 ADD conf/vsftpd.conf /etc/vsftpd.conf
