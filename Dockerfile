@@ -2,8 +2,8 @@ FROM damienlagae/debian-base
 MAINTAINER Damien Lagae <damien@lagae.info>
 
 # Set the enviroment variable
-ENV FTP_USER ftpuser
-ENV FTP_PASS ftppass
+ENV FTP_USER wln
+ENV FTP_PASS 123456
 
 # Install required packages
 RUN apt-get clean all && apt-get update && apt-get -y dist-upgrade
@@ -32,7 +32,7 @@ RUN chmod 777 /var/ftp /var/www
 VOLUME  ["/var/ftp"]
 
 # Set the port
-EXPOSE 20 21 12020 12021
+EXPOSE 20 21 12021
 
 # Run
 CMD ["/run.sh"]
