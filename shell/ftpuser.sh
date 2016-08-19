@@ -17,4 +17,3 @@ if [ "$#" -ne 2 ]; then
 fi
 
 echo -e "$1\n$2" | db5.3_load -T -t hash $database
-mkdir -p /var/ftp/$1
