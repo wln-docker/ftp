@@ -25,8 +25,7 @@ ADD shell/ftpuser.sh /ftpuser.sh
 ADD shell/run.sh /run.sh
 
 # Give the right permissions
-RUN sudo chmod 755 /*.sh
-RUN sudo chmod 777 /var/ftp
+RUN chmod 755 /*.sh
 
 # Add volumes for ftp
 VOLUME  ["/var/ftp"]
