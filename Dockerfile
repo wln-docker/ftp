@@ -26,6 +26,7 @@ ADD shell/run.sh /run.sh
 
 # Give the right permissions
 RUN chmod 755 /*.sh
+RUN chmod 777 /var/ftp
 
 # Add volumes for ftp
 VOLUME  ["/var/ftp"]
